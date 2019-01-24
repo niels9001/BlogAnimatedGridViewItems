@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UIFaces.NET.Models;
+using UIFaces.NET.Services;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +27,14 @@ namespace BlogAnimatedGridviewItems
         public MainPage()
         {
             this.InitializeComponent();
+            GetData();
+        }
+
+        private async void GetData()
+        {
+            UIFacesService Service = new UIFacesService("41ce8f96bade52007646eecac0a0c2");
+            List<Person> Persons = await Service.GetFaces();
+            PersonsGridView.ItemsSource = Persons;
         }
     }
 }
