@@ -164,7 +164,7 @@
                             </VisualStateManager.VisualStateGroups>
 
                             <ToolkitControls:DropShadowPanel x:Name="DropShadowHolder" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
-                               BlurRadius="10"
+                               BlurRadius="20"
                                ShadowOpacity="0.1"
                                OffsetX="1"
                                OffsetY="1"
@@ -201,8 +201,7 @@
                 <DataTemplate x:DataType="models:Person">
                     <Grid Background="#88293039" Height="90" Width="240" RowSpacing="2">
                         <Interactivity:Interaction.Behaviors>
-                             <Core:EventTriggerBehavior EventName="PointerEntered">
-                               
+                            <Core:EventTriggerBehavior EventName="PointerEntered">
                                 <Core:CallMethodAction TargetObject="{Binding ElementName=NameOffsetRight}" MethodName="StartAnimation"/>
                                 <Core:CallMethodAction TargetObject="{Binding ElementName=PositionOffsetRight}" MethodName="StartAnimation"/>
                                 <Core:CallMethodAction TargetObject="{Binding ElementName=LocationOffsetRight}" MethodName="StartAnimation"/>
@@ -211,7 +210,6 @@
                                 <Core:CallMethodAction TargetObject="{Binding ElementName=PhotoScaleUp}" MethodName="StartAnimation"/>
                             </Core:EventTriggerBehavior>
                             <Core:EventTriggerBehavior EventName="PointerExited">
-                             
                                 <Core:CallMethodAction TargetObject="{Binding ElementName=NameOffsetLeft}" MethodName="StartAnimation"/>
                                 <Core:CallMethodAction TargetObject="{Binding ElementName=PositionOffsetLeft}" MethodName="StartAnimation"/>
                                 <Core:CallMethodAction TargetObject="{Binding ElementName=LocationOffsetLeft}" MethodName="StartAnimation"/>
@@ -225,10 +223,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="30"/>
                         </Grid.ColumnDefinitions>
-
-
                         <PersonPicture ProfilePicture="{x:Bind Photo}" Opacity="1" Width="48" Height="48" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3">
-                           
                             <Interactivity:Interaction.Behaviors>
                                 <ToolkitBehaviors:Scale x:Name="PhotoScaleUp" Duration="250" Delay="0" AutomaticallyStart="False" ScaleX="1.1" ScaleY="1.1" CenterX="24" CenterY="24" EasingMode="EaseOut"  EasingType="Cubic" />
                                 <ToolkitBehaviors:Scale x:Name="PhotoScaleDown"  Duration="250" Delay="0" AutomaticallyStart="False" ScaleX="1" ScaleY="1" CenterX="24" CenterY="24" EasingMode="EaseOut"   EasingType="Cubic"/>
@@ -254,7 +249,6 @@
                                 <ToolkitBehaviors:Fade x:Name="LocationFadeOut"  Duration="300" Delay="0" AutomaticallyStart="False" Value="0" EasingMode="EaseOut"  EasingType="Cubic" />
                             </Interactivity:Interaction.Behaviors>
                         </TextBlock>
-                        <!--<AppBarButton Icon="Phone" Grid.Column="2" VerticalAlignment="Center" Background="Transparent" Foreground="White" HorizontalAlignment="Center" Style="{StaticResource AppBarButtonRevealStyle}"/>-->
                         <Grid Grid.Column="2" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>

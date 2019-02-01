@@ -32,7 +32,7 @@ namespace BlogAnimatedGridviewItems
 
         private async void GetData()
         {
-            UIFacesService Service = new UIFacesService("41ce8f96bade52007646eecac0a0c2");
+            UIFacesService Service = new UIFacesService("");
             List<Person> Persons = await Service.GetFaces();
             PersonsGridView.ItemsSource = Persons;
         }
