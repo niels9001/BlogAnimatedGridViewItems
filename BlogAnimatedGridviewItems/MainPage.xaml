@@ -120,8 +120,6 @@
                                         <VisualState.Setters>
                                             <Setter Target="RootGrid.(RevealBrush.State)" Value="PointerOver" />
                                             <Setter Target="ContentPresenter.Background" Value="{ThemeResource GridViewItemRevealBackgroundPointerOver}" />
-                                            <Setter Target="ContentPresenter.BorderBrush" Value="{ThemeResource GridViewItemRevealBorderBrushPointerOver }"/>
-                                            <!--<Setter Target="ContentPresenter.Foreground" Value="{ThemeResource GridViewItemRevealForegroundPointerOver}" />-->
                                         </VisualState.Setters>
                                     </VisualState>
 
@@ -129,8 +127,6 @@
                                         <VisualState.Setters>
                                             <Setter Target="RootGrid.(RevealBrush.State)" Value="Pressed" />
                                             <Setter Target="ContentPresenter.Background" Value="{ThemeResource GridViewItemRevealBackgroundPointerOverPressed }" />
-                                            <Setter Target="ContentPresenter.BorderBrush" Value="{ThemeResource GridViewItemRevealBorderBrushPointerOverPressed}" />
-                                            <!--<Setter Target="ContentPresenter.Foreground" Value="{ThemeResource GridViewItemForegroundPressed}" />-->
                                         </VisualState.Setters>
                                     </VisualState>
 
@@ -138,8 +134,6 @@
                                         <VisualState.Setters>
                                             <Setter Target="RootGrid.(RevealBrush.State)" Value="Pressed" />
                                             <Setter Target="ContentPresenter.Background" Value="{ThemeResource GridViewItemRevealBackgroundPressed }" />
-                                            <Setter Target="ContentPresenter.BorderBrush" Value="{ThemeResource GridViewItemRevealBorderBrushPressed }" />
-                                            <!--<Setter Target="ContentPresenter.Foreground" Value="{ThemeResource GridViewItemForegroundPressed}" />-->
                                         </VisualState.Setters>
                                     </VisualState>
 
@@ -147,8 +141,6 @@
                                     <VisualState x:Name="PressedSelected">
                                         <VisualState.Setters>
                                             <Setter Target="ContentPresenter.(RevealBrush.State)" Value="Pressed" />
-                                            <Setter Target="ContentPresenter.BorderBrush" Value="{ThemeResource GridViewItemRevealBorderBrushPressedSelected}" />
-                                            <!--<Setter Target="ContentPresenter.Foreground" Value="{ThemeResource GridViewItemForegroundPressed}" />-->
                                         </VisualState.Setters>
                                     </VisualState>
                                 </VisualStateGroup>
